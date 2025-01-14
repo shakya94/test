@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/studentopedia', {
+mongoose.connect('mongodb+srv://harshitshakya94:Kanpur94%40@studentopedia.ufyih.mongodb.net/studentopedia', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

@@ -3,9 +3,9 @@ const Image = require("../models/images");
 const router =express.Router();
 
 router.post('/images', async (req,res)=>{
-    const imagesdata = new event(req.body);
+    const imagesdata = new Image(req.body);
     imagesdata.save()
-    .then(()=> res.status(500).json({message:"Sucess"}))
+    .then(()=> res.status(200).json({message:"Sucess"}))
     .catch(err =>
     {
         res.status(501).json({message: err})
