@@ -1,5 +1,5 @@
 const express = require('express');
-const event = require("../models/images");
+const Image = require("../models/images");
 const router =express.Router();
 
 router.post('/images', async (req,res)=>{
