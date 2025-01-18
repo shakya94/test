@@ -1,6 +1,7 @@
 const express = require('express');
 const Image = require("../models/images");
 const router =express.Router();
+const cors = require("./cors");
 
 router.post('/images', async (req,res)=>{
     const imagesdata = new Image(req.body);
@@ -13,7 +14,7 @@ router.post('/images', async (req,res)=>{
     )
 });
 
-router.get('/images', async (req, res) => {
+router.get('/images',cors, async (req, res) => {
     try {
         const images = await Image.find({});
         res.status(200).json({ message: "Images retrieved successfully", data: images });
